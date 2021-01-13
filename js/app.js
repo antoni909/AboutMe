@@ -27,30 +27,30 @@ console.log(userName);
 // //Here I create the the subsequent prompt questions and positive confirmation to the user
 
 // // Question 1
-function questionOne() {
+// function questionOne() {
 
-  var initialResponse = prompt('Hello ' + userName + ', I will ask you five yes or no questions, is that okay?');
-  var userResponse = initialResponse.toLowerCase();
-  if(userResponse === 'yes') {
-    return alert('That is amazing, ' + userName + ' ! Let\'s begin then :D');
-  }else {
-    return alert('It looks like you dont want to continue, ' + userName + ', thank you for visiting my page');
-  }
-}
-var responseOne = questionOne();
-
-// // Question 2
-// function questionTwo() {
-
-//   var userResp = prompt('Respond Yes or No to question 01: is the sky blue?');
+//   var initialResponse = prompt('Hello ' + userName + ', I will ask you five yes or no questions, is that okay?');
 //   var userResponse = initialResponse.toLowerCase();
-//   if(userResponse === 'yes'){
-//     return alert('Great answer ' + userName +'!');
+//   if(userResponse === 'yes') {
+//     return alert('That is amazing, ' + userName + ' ! Let\'s begin then :D');
 //   }else {
-//     return alert( userName + ', you might want to rethink that, refresh the page and try again');
+//     return alert('It looks like you dont want to continue, ' + userName + ', thank you for visiting my page');
 //   }
 // }
-// var responseTwo = questionTwo();
+// var responseOne = questionOne();
+
+// Question 2
+function questionTwo() {
+
+  var userResp = prompt('Respond Yes or No to question 01: is the sky blue?');
+  var userResponse = initialResponse.toLowerCase();
+  if(userResponse === 'yes'){
+    return alert('Great answer ' + userName +'!');
+  }else {
+    return alert( userName + ', you might want to rethink that, refresh the page and try again');
+  }
+}
+var responseTwo = questionTwo();
 
 // // Question 3
 // function questionThree() {
