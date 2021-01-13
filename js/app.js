@@ -37,7 +37,7 @@ function questionOne() {
     // return console.log('That is amazing, ' + userName + ' ! Let\'s begin then :D');
     return alert('That is amazing, ' + userName + ' ! Let\'s begin then :D');
   }else {
-    return alert('It looks like you dont want to continue, ' + userName + ', thank you for visiting my page');
+    return alert('It looks like you dont want to continue, ' + userName + ', but I will force you to answer Yes or No questions against your will');
   }
 }
 var responseOne = questionOne();
