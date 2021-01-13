@@ -1,4 +1,13 @@
 body {
-    background-color: black;
+    background-color: red;
     margin: auto;
+}
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
 }
