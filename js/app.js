@@ -26,7 +26,7 @@ console.log(userName);
 
 //Here I create the the subsequent prompt questions and positive confirmation to the user
 
-// NOTE TO THE TA GRADING: I have added console.log after calling the function to pass remove Linter errors
+// NOTE TO THE TA GRADING: I have added console.log after calling the function to pass Linter errors
 
 // Question 1
 function questionOne() {
