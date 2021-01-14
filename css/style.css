@@ -1,13 +1,46 @@
 body {
-    background-color: red;
-    margin: auto;
+        width: auto;
+        margin: 0 auto;
+        background-color: black;
+        padding: 0 20px 20px 20px;
+        border: 0 solid rgb(255, 255, 255);
 }
+
+h1, h2 {
+    color: red;
+    text-align: left;
+    text-emphasis: bold;
+    margin: 0;
+    padding: 20px 0;
+}   
+
+p {
+    color: #11C4CA;
+}
+
 ol {
+    color: #11C4CA;
     list-style-type: decimal;
     list-style-position: inside;
+    text-align: left;
+    text-emphasis: bold;
+    margin: 0;
+    padding: 10px 0;
 }
 
 ul {
+    color: #11C4CA;
     list-style-type: circle;
     list-style-position: inside;
 }
+
+img {
+    border: 10px solid white;
+    border: 5px solid ;
+    border-radius: 10px;
+    padding: 0px 0px;
+    margin-right: 25px;
+    width: 200px;
+    float: left;
+}
+
