@@ -12,6 +12,7 @@ I built an app with a direct and powerful purpose. My app does all of the things
 
 * [submission PR]()
 * Any Links used as reference
+[CSS Reset.css](https://meyerweb.com/eric/tools/css/reset/)
 [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 [W3schools](https://www.w3schools.com/)
 [Pexel](https://www.pexels.com/)
