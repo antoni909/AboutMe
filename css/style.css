@@ -17,9 +17,10 @@ body {
 }
 
 h1, h2 {
-    color: red;
+    color: #60F585;
     text-align: left;
     text-emphasis: bold;
+    font-size: 30px;
     margin: 0;
     padding: 20px 0;
 }   
@@ -40,13 +41,12 @@ ol {
 
 ul {
     color: #11C4CA;
-    list-style-type: circle;
+    list-style-type: disc;
     list-style-position: inside;
 }
 
 img {
-    border: 10px solid white;
-    border: 5px solid ;
+    border: 2px solid #11C4CA;
     border-radius: 10px;
     padding: 0px 0px;
     margin-top: 10px;
@@ -56,9 +56,9 @@ img {
 }
 
 div {
-    border: 1px solid white;
-    background-color: black ;
-    outline: thin;
+    border: 5px solid #11C4CA;
+    outline: thick;
     border-radius: 10px;
     padding: 0 20px 20px 20px;
+    font-size: 25px;
 }
