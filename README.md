@@ -8,11 +8,14 @@ I built an app with a direct and powerful purpose. My app does all of the things
 
 ### Collaborators: Shelby Harner, Audrey Patterson
 
-### Links and Resources
+### Tools and Resources Used
 
 * [submission PR]()
 * Any Links used as reference
-[GitHub codefellows/seattle-201n21 Repository](https://github.com/codefellows/seattle-201n21)
+[Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+[W3schools](https://www.w3schools.com/)
+[Adobe Color Wheel](https://color.adobe.com/create/color-wheel)
+[GitHub CodeFellows Repo](https://github.com/codefellows/seattle-201n21)
 [stack overflow](https://stackoverflow.com/questions/2642067/ordered-list-ol-showing-up-un-numbered)
 
 ### Reflections and Comments
