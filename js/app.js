@@ -43,6 +43,7 @@ console.log(userName);
 // var userResp = prompt('Do I live in the Pacific Northwest of the United States of \'Murica?');
 // var userResponseOne = userResp.toLowerCase();
 // if(userResponseOne === 'yes'){
+  
 //   // return console.log('Great answer ' + userName +'!');
 //   alert('Great answer ' + userName +'!');
 // }else {
@@ -132,6 +133,12 @@ Here I will create a question that begins the guessing game:(consider using  loo
  */
 
 //here i will create the seventh question
+
+// the code below works when reponses are in the array order
+// also responses in revers order are passed as incorrect
+// the code works when responses incorrect stay incorrect
+// score and attempts by user count work
+// code breaks when .toLowerCase is added to userResponseSix
 
 var arrayCorrectAnswers = [ 'a', 'b', 'c','d','e','f'];
 var maxAttempts = 6;
