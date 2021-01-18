@@ -87,6 +87,16 @@ console.log(userName);
 
 // var endMessage = alert('thank you for answering my questions,  ' + userName + ', have a great rest of your day!');
 
+/*
+Here I will create a 6th Question that:
+-takes in numeric input by prompting the user
+-guess the number between 1 and 10
+  -with alerts that indicate guess is too high/low
+-only has 4 total attempts
+-if all 4 attempts are used up, tell user the correct answer
+
+*/
+
 // var userNumberGuess = parseInt(prompt('Im thinking of a number between 1 and 10, what is the number?'));
 // var numberOfGuesses = 4;
 // var correctNumber = 7;
@@ -111,24 +121,76 @@ console.log(userName);
 //   var wrongGuesses = alert('you have exeeded your four attempts, the answer is 7');
 // }
 
-var myFavoriteMovies = ['a', 'b', 'c'];
-var numberChances = 6;
+/*
+Here I will create a question that begins the guessing game:(consider using  loop for this question)
+-add a 7th Question that has multiple correct answers in an ARRAY
+-Give user 6 total attempts to guess correct answer
+-Guess ends when:
+  -User guesses correct
+  -User runs out of attempt
+-Display all possible correct answers to User
+ */
+
+//here i will create the seventh question
+
+var arrayCorrectAnswers = [ 'a', 'b', 'c','d','e','f'];
+var maxAttempts = 6;
 var attemptsMadeCounter = 0;
+var userScore= 0;
 
-var userResponseMovie = prompt(`${userName}, in the prompt, guess what one of my favorite movies is?`).toLowerCase();
-console.log(userResponseMovie);
+var userResponseSix = prompt(`${userName} can you guess what a favorite movie of mine is? You have 6 total attempts!`);
+console.log(userResponseSix);
 
-for (var i=0; i<numberChances; i++){
-
-  if(userResponseMovie !== myFavoriteMovies[i]) {
-
-    userResponseMovie = prompt(`try again please ${userName}, ${userResponseMovie} is not correct`);
-    console.log(userResponseMovie);
+for(var i=0; i<arrayCorrectAnswers.length; i++){
+  if(arrayCorrectAnswers[i] === userResponseSix){
     attemptsMadeCounter ++;
+    userScore += 1;
+    userResponseSix = prompt(`${userName} You guessed correctly! Your Score is: ${userScore} and you are on attempt number: ${attemptsMadeCounter},  Keep guessing some more and see how many you can get correctly!`);
+  }else if(arrayCorrectAnswers[i] !== userResponseSix){
+    attemptsMadeCounter ++;
+    userScore -= 1;
+    userResponseSix = prompt(`${userName} You guessed incorrectly,Your Score is: ${userScore} and you are on attempt number: ${attemptsMadeCounter},  Keep guessing some more and see how many you can get correctly!`);
+  }
 
-  }else if(myFavoriteMovies[i] === userResponseMovie){
-    userResponseMovie = prompt(`You guessed correctly: ${userResponseMovie}, is one of my favorite movies! the correct answers were ${myFavoriteMovies}`);
-    console.log(userResponseMovie);
-    break;
+  if(maxAttempts === attemptsMadeCounter){
+    var messageToUser = alert(`${userName}, Your Score is: ${userScore} and You have reached the maximum number of attempts which is: ${attemptsMadeCounter}, My favorite movies are: ${arrayCorrectAnswers} thank you for playing!`);
+    console.log(messageToUser);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var myFavoriteMovies = ['a', 'b', 'c'];
+// var numberChances = 6;
+// var attemptsMadeCounter = 0;
+
+// var userResponseMovie = prompt(`${userName}, in the prompt, guess what one of my favorite movies is?`).toLowerCase();
+// console.log(userResponseMovie);
+
+// for (var i=0; i<numberChances; i++){
+
+//   if(userResponseMovie !== myFavoriteMovies[i]) {
+
+//     userResponseMovie = prompt(`try again please ${userName}, ${userResponseMovie} is not correct`);
+//     console.log(userResponseMovie);
+//     attemptsMadeCounter ++;
+
+//   }else if(myFavoriteMovies[i] === userResponseMovie){
+//     userResponseMovie = prompt(`You guessed correctly: ${userResponseMovie}, is one of my favorite movies! the correct answers were ${myFavoriteMovies}`);
+//     console.log(userResponseMovie);
+//     break;
+//   }
+// }
