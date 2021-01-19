@@ -18,9 +18,7 @@
 
 // //Here I create an initial prompt question to capture the users name and use it in subsequent prompts
 
-var userNameResponse = prompt('Hello and Welcome to my page! What is your name?');
-var userName = userNameResponse.toLowerCase();
-console.log(userName);
+var userName = prompt('Hello and Welcome to my page! What is your name?').toLowerCase();
 
 // //Here I create the the subsequent prompt questions and positive confirmation to the user
 
@@ -140,64 +138,42 @@ Here I will create a question that begins the guessing game:(consider using  loo
 // score and attempts by user count work
 // code breaks when .toLowerCase is added to userResponseSix
 
-var arrayCorrectAnswers = [ 'a', 'b', 'c','d','e','f'];
+var arrayCorrectAnswers = ['lion', 'tiger', 'bear', 'orca'];
+// console.log(arrayCorrectAnswers);
 var maxAttempts = 6;
 var attemptsMadeCounter = 0;
 var userScore= 0;
+var correctAnswer = false;
+// arrayCorrectAnswers.length = 4
+// i --> loops 4 times, therefor i runs 0-->4
+// NOTE: i === the index number of the item in the array NOT some random item in the array
+// so they have to guess the correct animals and the correct order
 
-var userResponseSix = prompt(`${userName} can you guess what a favorite movie of mine is? You have 6 total attempts!`);
-console.log(userResponseSix);
+for(var i=0; i < 6; i++){
+  var userResponseSix = prompt(`${userName}, Can you guess what my favorite animals are? 
+  Your Score is: ${userScore} ,
+  You have: ${maxAttempts-attemptsMadeCounter} attempts left`);
 
-for(var i=0; i<arrayCorrectAnswers.length; i++){
-  if(arrayCorrectAnswers[i] === userResponseSix){
-    attemptsMadeCounter ++;
-    userScore += 1;
-    userResponseSix = prompt(`${userName} You guessed correctly! Your Score is: ${userScore} and you are on attempt number: ${attemptsMadeCounter},  Keep guessing some more and see how many you can get correctly!`);
-  }else if(arrayCorrectAnswers[i] !== userResponseSix){
-    attemptsMadeCounter ++;
-    userScore -= 1;
-    userResponseSix = prompt(`${userName} You guessed incorrectly,Your Score is: ${userScore} and you are on attempt number: ${attemptsMadeCounter},  Keep guessing some more and see how many you can get correctly!`);
+  for(var j=0; j<arrayCorrectAnswers.length; j++){
+    if(userResponseSix === arrayCorrectAnswers[j]) {
+      alert(`${userName}, You guessed RIGHT! 
+      Your Score is: ${userScore}
+      You have: ${maxAttempts-attemptsMadeCounter} attempts left`);
+      userScore++;
+      attemptsMadeCounter++;
+      correctAnswer = true;
+      break;
+    }
+    // attemptsMadeCounter += 1;
+    // userScore += 1;
   }
-
-  if(maxAttempts === attemptsMadeCounter){
-    var messageToUser = alert(`${userName}, Your Score is: ${userScore} and You have reached the maximum number of attempts which is: ${attemptsMadeCounter}, My favorite movies are: ${arrayCorrectAnswers} thank you for playing!`);
-    console.log(messageToUser);
+  if(correctAnswer){
+    break;
+  }else{
+    attemptsMadeCounter++;
+    alert(`You are Wrong! 
+    You have this many attempts left: ${5-i}`);
   }
 }
+alert (`${userName}, Your Score is: ${userScore} and You have reached the maximum number of attempts which is: ${attemptsMadeCounter}, My favorite animals are: ${arrayCorrectAnswers} thank you for playing!`);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var myFavoriteMovies = ['a', 'b', 'c'];
-// var numberChances = 6;
-// var attemptsMadeCounter = 0;
-
-// var userResponseMovie = prompt(`${userName}, in the prompt, guess what one of my favorite movies is?`).toLowerCase();
-// console.log(userResponseMovie);
-
-// for (var i=0; i<numberChances; i++){
-
-//   if(userResponseMovie !== myFavoriteMovies[i]) {
-
-//     userResponseMovie = prompt(`try again please ${userName}, ${userResponseMovie} is not correct`);
-//     console.log(userResponseMovie);
-//     attemptsMadeCounter ++;
-
-//   }else if(myFavoriteMovies[i] === userResponseMovie){
-//     userResponseMovie = prompt(`You guessed correctly: ${userResponseMovie}, is one of my favorite movies! the correct answers were ${myFavoriteMovies}`);
-//     console.log(userResponseMovie);
-//     break;
-//   }
-// }
