@@ -149,12 +149,12 @@ var correctAnswer = false;
 // NOTE: i === the index number of the item in the array NOT some random item in the array
 // so they have to guess the correct animals and the correct order
 
-for(var i=0; i < 6; i++){
+for(var j=0; j < 6; j++){
   var userResponseSix = prompt(`${userName}, Can you guess what my favorite animals are? 
   Your Score is: ${userScore} ,
   You have: ${maxAttempts-attemptsMadeCounter} attempts left`);
 
-  for(var j=0; j<arrayCorrectAnswers.length; j++){
+  for(var k=0; k<arrayCorrectAnswers.length; k++){
     if(userResponseSix === arrayCorrectAnswers[j]) {
       alert(`${userName}, You guessed RIGHT! 
       Your Score is: ${userScore}
@@ -172,7 +172,7 @@ for(var i=0; i < 6; i++){
   }else{
     attemptsMadeCounter++;
     alert(`You are Wrong! 
-    You have this many attempts left: ${5-i}`);
+    You have this many attempts left: ${5-j}`);
   }
 }
 alert (`${userName}, Your Score is: ${userScore} and You have reached the maximum number of attempts which is: ${attemptsMadeCounter}, My favorite animals are: ${arrayCorrectAnswers} thank you for playing!`);
