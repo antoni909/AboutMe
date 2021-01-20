@@ -37,7 +37,7 @@ questionOne();
 // Question 2
 function questionTwo(){
   userResponse = prompt('Do I live in the Pacific Northwest of the United States of \'Murica?');
-  
+
   if(userResponse === 'yes' || userResponse === 'y'){
     // return console.log('Great answer ' + userName +'!');
     alert('Great answer ' + userName +'!');
