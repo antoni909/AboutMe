@@ -22,61 +22,72 @@ var userName = prompt('Hello and Welcome to my page! What is your name?').toUppe
 
 
 // Question 1
-var userResponse = prompt('Hello ' + userName + ', I will ask you five Yes or No questions, is that okay?').toLocaleLowerCase();
+var userResponse = prompt('Hello ' + userName + ', I will ask you five Yes or No questions, is that okay?').toLowerCase();
 
-if(userResponse === 'yes' || userResponse === 'y') {
-  // return console.log('That is amazing, ' + userName + ' ! Let\'s begin then :D');
-  alert('That is amazing, ' + userName + ' ! Let\'s begin then :D');
-}else {
-  alert('It looks like you dont want to continue, ' + userName + ', but I will still force you to answer Yes or No questions against your will lol');
+function questionOne(){
+  if(userResponse === 'yes' || userResponse === 'y') {
+    // return console.log('That is amazing, ' + userName + ' ! Let\'s begin then :D');
+    alert('That is amazing, ' + userName + ' ! Let\'s begin then :D');
+  }else {
+    alert('It looks like you dont want to continue, ' + userName + ', but I will still force you to answer Yes or No questions against your will lol');
+  }
 }
-
+questionOne();
 
 // Question 2
-userResponse = prompt('Do I live in the Pacific Northwest of the United States of \'Murica?');
-
-if(userResponse === 'yes' || userResponse === 'y'){
-  // return console.log('Great answer ' + userName +'!');
-  alert('Great answer ' + userName +'!');
-}else {
-  alert( userName + ', you might want to rethink that, refresh the page and try again');
+function questionTwo(){
+  userResponse = prompt('Do I live in the Pacific Northwest of the United States of \'Murica?');
+  
+  if(userResponse === 'yes' || userResponse === 'y'){
+    // return console.log('Great answer ' + userName +'!');
+    alert('Great answer ' + userName +'!');
+  }else {
+    alert( userName + ', you might want to rethink that, refresh the page and try again');
+  }
 }
-
+questionTwo();
 
 // Question 3
 userResponse = prompt( userName +', Am I enrolled in Code Fellows 201 Fundumentals of Software Development?');
 
-if(userResponse === 'yes' || userResponse === 'y'){
-  // return console.log(''Great Job! I am enrolled into the 201 coure'');
-  alert('Great Job! I am enrolled into the 201 coure');
-}else {
-  alert('No? ' + userName + ', I am in fact enrolled into the 201 course');
+function questionThree(){
+  if(userResponse === 'yes' || userResponse === 'y'){
+    // return console.log(''Great Job! I am enrolled into the 201 coure'');
+    alert('Great Job! I am enrolled into the 201 coure');
+  }else {
+    alert('No? ' + userName + ', I am in fact enrolled into the 201 course');
+  }
 }
-
+questionThree();
 
 //Question 4
 userResponse = prompt('Will I be enrolling into Code Fellows 301 after this 201 course?');
 
-if(userResponse === 'yes'|| userResponse === 'y'){
-  // return console.log('That\'s awesome ' + userName + ', I am ready to get the ball rolling on the 301 course!');
-  alert('That\'s awesome ' + userName + ', I am ready to get the ball rolling on the 301 course!');
-}else {
-  alert('Im sorry to say you are wrong, ' + userName + ', but I am most definately going to enroll into the 301 course' );
+function questionFour(){
+  if(userResponse === 'yes'|| userResponse === 'y'){
+    // return console.log('That\'s awesome ' + userName + ', I am ready to get the ball rolling on the 301 course!');
+    alert('That\'s awesome ' + userName + ', I am ready to get the ball rolling on the 301 course!');
+  }else {
+    alert('Im sorry to say you are wrong, ' + userName + ', but I am most definately going to enroll into the 301 course' );
+  }
 }
 
+questionFour();
 
 // Question 5
 userResponse = prompt('Will I enroll into the 401 course at Code Fellows in the near future?');
 var alertToUserQuestionFive;
 
-if(userResponse === 'yes'|| userResponse === 'y'){
-  // return console.log('I will most definately enroll into the 401 Advanced Software Development in Full-Stack JavaScript course');
-  alertToUserQuestionFive = alert('I will most definately enroll into the 401 Advanced Software Development in Full-Stack JavaScript course');
-}else{
-  alertToUserQuestionFive = alert(' You are wrong ' + userName + ', I am in fact going to enroll into the 401 course' );
-  // console.log(alertToUserQuestionFive);
+function questionFive(){
+  if(userResponse === 'yes'|| userResponse === 'y'){
+    // return console.log('I will most definately enroll into the 401 Advanced Software Development in Full-Stack JavaScript course');
+    alertToUserQuestionFive = alert('I will most definately enroll into the 401 Advanced Software Development in Full-Stack JavaScript course');
+  }else{
+    alertToUserQuestionFive = alert(' You are wrong ' + userName + ', I am in fact going to enroll into the 401 course' );
+    // console.log(alertToUserQuestionFive);
+  }
 }
-
+questionFive();
 
 // /*
 
@@ -96,25 +107,27 @@ var numberOfGuesses = 4;
 var correctNumber = 7;
 var wrongGuesses;
 
-var i;
-for (i=0; i<numberOfGuesses; i++) {
-  // console.log('this is i ' + i);
-  if(userResponse < correctNumber){
-    console.log(userResponse = parseInt(prompt(`${userResponse}, is too low, try again`)));
-    // userNumberGuess = prompt(`${userNumberGuess}, is too low`);
-  }else if(userResponse > correctNumber){
-    console.log(userResponse = parseInt(prompt(`${userResponse}, is too high, try again`)));
-    // userNumberGuess = prompt(`${userName} you are right!`);
-  }else if(userResponse === correctNumber){
-    console.log(alert(`Whoa! ${userName} you guessed correctly!`));
-    // var guessAlert = alert(`${userName} you are right!`);
-    break;
+function questionSix(){
+  var i;
+  for (i=0; i<numberOfGuesses; i++) {
+    // console.log('this is i ' + i);
+    if(userResponse < correctNumber){
+      console.log(userResponse = parseInt(prompt(`${userResponse}, is too low, try again`)));
+      // userNumberGuess = prompt(`${userNumberGuess}, is too low`);
+    }else if(userResponse > correctNumber){
+      console.log(userResponse = parseInt(prompt(`${userResponse}, is too high, try again`)));
+      // userNumberGuess = prompt(`${userName} you are right!`);
+    }else if(userResponse === correctNumber){
+      console.log(alert(`Whoa! ${userName} you guessed correctly!`));
+      // var guessAlert = alert(`${userName} you are right!`);
+      break;
+    }
+  }
+  if(i === numberOfGuesses){
+    wrongGuesses = alert('you have exeeded your four attempts, the answer is 7');
   }
 }
-
-if(i === numberOfGuesses){
-  wrongGuesses = alert('you have exeeded your four attempts, the answer is 7');
-}
+questionSix();
 
 // /*
 // Here I will create a question that begins the guessing game:(consider using  loop for this question)
@@ -143,29 +156,31 @@ var maxAttempts = 6;
 var attemptsMadeCounter = 0;
 var correctAnswer = false;
 
-for(var j=0; j < 6; j++){
-  userResponse = prompt(
-    `Can you guess one of my favorite animals? 
-    You have: ${maxAttempts-attemptsMadeCounter} attempts remaining`);
-
-  for(var k=0; k<arrayCorrectAnswers.length; k++){
-    if(userResponse === arrayCorrectAnswers[j]) {
-      alert(`${userName}, You guessed RIGHT!`);
-      correctAnswer = true;
+function questionSeven(){
+  for(var j=0; j < 6; j++){
+    userResponse = prompt(
+      `Can you guess one of my favorite animals? 
+      You have: ${maxAttempts-attemptsMadeCounter} attempts remaining`);
+  
+    for(var k=0; k<arrayCorrectAnswers.length; k++){
+      if(userResponse === arrayCorrectAnswers[j]) {
+        alert(`${userName}, You guessed RIGHT!`);
+        correctAnswer = true;
+        break;
+      }
+    }
+    if(correctAnswer){
       break;
+    }else{
+      attemptsMadeCounter++;
+      alert(
+        `Incorrect! 
+        You have: ${5-j} attempts left`);
     }
   }
-  if(correctAnswer){
-    break;
-  }else{
-    attemptsMadeCounter++;
-    alert(
-      `Incorrect! 
-      You have: ${5-j} attempts left`);
-  }
+  alert (
+    `Thank you for playing, ${userName}, 
+    My favorite animals are: ${arrayCorrectAnswers}
+    You have reached the maximum number of allowed attempts: ${attemptsMadeCounter}`);
 }
-alert (
-  `Thank you for playing, ${userName}, 
-  My favorite animals are: ${arrayCorrectAnswers}
-  You have reached the maximum number of allowed attempts: ${attemptsMadeCounter}`);
-
+questionSeven();
