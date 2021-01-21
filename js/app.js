@@ -16,10 +16,10 @@
 
 'use strict';
 
-// //Here I create an initial prompt question to capture the users name and use it in subsequent prompts
+// Here I create an initial prompt question to capture the users name and use it in subsequent prompts
 
 var userName = prompt('Hello and Welcome to my page! What is your name?').toUpperCase();
-
+var scoreTotal = 0;
 
 // Question 1
 var userResponse = prompt('Hello ' + userName + ', I will ask you five Yes or No questions, is that okay?').toLowerCase();
@@ -28,6 +28,7 @@ function questionOne(){
   if(userResponse === 'yes' || userResponse === 'y') {
     // return console.log('That is amazing, ' + userName + ' ! Let\'s begin then :D');
     alert('That is amazing, ' + userName + ' ! Let\'s begin then :D');
+    scoreTotal++;
   }else {
     alert('It looks like you dont want to continue, ' + userName + ', but I will still force you to answer Yes or No questions against your will lol');
   }
@@ -41,6 +42,7 @@ function questionTwo(){
   if(userResponse === 'yes' || userResponse === 'y'){
     // return console.log('Great answer ' + userName +'!');
     alert('Great answer ' + userName +'!');
+    scoreTotal++;
   }else {
     alert( userName + ', you might want to rethink that, refresh the page and try again');
   }
@@ -54,6 +56,7 @@ function questionThree(){
   if(userResponse === 'yes' || userResponse === 'y'){
     // return console.log(''Great Job! I am enrolled into the 201 coure'');
     alert('Great Job! I am enrolled into the 201 coure');
+    scoreTotal++;
   }else {
     alert('No? ' + userName + ', I am in fact enrolled into the 201 course');
   }
@@ -67,11 +70,11 @@ function questionFour(){
   if(userResponse === 'yes'|| userResponse === 'y'){
     // return console.log('That\'s awesome ' + userName + ', I am ready to get the ball rolling on the 301 course!');
     alert('That\'s awesome ' + userName + ', I am ready to get the ball rolling on the 301 course!');
+    scoreTotal++;
   }else {
     alert('Im sorry to say you are wrong, ' + userName + ', but I am most definately going to enroll into the 301 course' );
   }
 }
-
 questionFour();
 
 // Question 5
@@ -82,6 +85,7 @@ function questionFive(){
   if(userResponse === 'yes'|| userResponse === 'y'){
     // return console.log('I will most definately enroll into the 401 Advanced Software Development in Full-Stack JavaScript course');
     alertToUserQuestionFive = alert('I will most definately enroll into the 401 Advanced Software Development in Full-Stack JavaScript course');
+    scoreTotal++;
   }else{
     alertToUserQuestionFive = alert(' You are wrong ' + userName + ', I am in fact going to enroll into the 401 course' );
     // console.log(alertToUserQuestionFive);
@@ -101,7 +105,7 @@ questionFive();
 // */
 
 
-//Questions 6
+// Questions 6
 userResponse = parseInt(prompt('Im thinking of a number between 1 and 10, what is the number?'));
 var numberOfGuesses = 4;
 var correctNumber = 7;
@@ -120,6 +124,7 @@ function questionSix(){
     }else if(userResponse === correctNumber){
       console.log(alert(`Whoa! ${userName} you guessed correctly!`));
       // var guessAlert = alert(`${userName} you are right!`);
+      scoreTotal++;
       break;
     }
   }
@@ -129,7 +134,7 @@ function questionSix(){
 }
 questionSix();
 
-// /*
+/*
 // Here I will create a question that begins the guessing game:(consider using  loop for this question)
 // -add a 7th Question that has multiple correct answers in an ARRAY
 // -Give user 6 total attempts to guess correct answer
@@ -147,28 +152,32 @@ questionSix();
 // -the code works when responses incorrect stay incorrect
 // -score and attempts by user count work
 // -code breaks when .toLowerCase is added to userResponseSix
-// */
+*/
 
-
-//Question 7
 var arrayCorrectAnswers = ['lion', 'tiger', 'bear', 'orca'];
 var maxAttempts = 6;
 var attemptsMadeCounter = 0;
 var correctAnswer = false;
 
+
+// Question 7
+
 function questionSeven(){
-  for(var j=0; j < 6; j++){
+
+  for(var j=0; j < maxAttempts; j++){
     userResponse = prompt(
       `Can you guess one of my favorite animals? 
       You have: ${maxAttempts-attemptsMadeCounter} attempts remaining`);
-  
+
     for(var k=0; k<arrayCorrectAnswers.length; k++){
-      if(userResponse === arrayCorrectAnswers[j]) {
+      if(userResponse === arrayCorrectAnswers[k]) {
         alert(`${userName}, You guessed RIGHT!`);
+        scoreTotal++;
         correctAnswer = true;
         break;
       }
     }
+
     if(correctAnswer){
       break;
     }else{
@@ -179,8 +188,11 @@ function questionSeven(){
     }
   }
   alert (
-    `Thank you for playing, ${userName}, 
+    `${userName}, 
     My favorite animals are: ${arrayCorrectAnswers}
-    You have reached the maximum number of allowed attempts: ${attemptsMadeCounter}`);
+    Your attempts: ${attemptsMadeCounter} / out of: ${maxAttempts}`);
 }
 questionSeven();
+
+var finalAlert = alert(`${userName} Thank you for visiting my page and answering my questions!
+you answered: ${scoreTotal} / 7 questions correctly!`);
