@@ -196,3 +196,18 @@ questionSeven();
 
 var finalAlert = alert(`${userName} Thank you for visiting my page and answering my questions!
 you answered: ${scoreTotal} / 7 questions correctly!`);
+
+
+// Next Steps: REFACTOR the code!
+
+// Practice D.R.Y. !!!
+
+// example: funciton that address confirmation alerts
+
+// function helperFunc(){
+//    confirmation alert code
+//    score keeper code
+// }
+
+// then call the helper function in the code
+//helperFunc();
