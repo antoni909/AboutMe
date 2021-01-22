@@ -5,9 +5,8 @@ html {
 body {
         width: auto;
         margin: 0 auto;
-        background-color: black;
-        padding: 0 20px 20px 20px;
-        border: 0 solid rgb(255, 255, 255);
+        padding: 20px 20px;
+        /* border: 5px solid rgb(255, 255, 255); */
 
         background-image: url(../img/pexels-sheena-wood-574116.jpg);    
         background-repeat: no-repeat;
@@ -17,16 +16,21 @@ body {
 }
 
 h1, h2 {
+    border: .1em solid;
     color: #60F585;
     text-align: left;
     text-emphasis: bold;
     font-size: 30px;
-    margin: 0;
-    padding: 20px 0;
+    margin: 25px 25px;
+    padding: 25px 25px;
 }   
 
 p {
+    border: .1em solid rgb(255, 74, 74);
     color: #11C4CA;
+    font-size: 30px;
+    margin: 25px 25px;
+    padding: 25px 25px;
 }
 
 ol {
@@ -35,18 +39,22 @@ ol {
     list-style-position: inside;
     text-align: left;
     text-emphasis: bold;
-    margin: 0;
-    padding: 10px 0;
+    border: .1em solid orange;
+    margin: 25px 25px;
+    padding: 25px 25px;
 }
 
 ul {
     color: #11C4CA;
     list-style-type: disc;
     list-style-position: inside;
+    border: .1em solid violet;
+    margin: 25px 25px;
+    padding: 25px 25px;
 }
 
 img {
-    border: 2px solid #11C4CA;
+    border: 2px solid black;
     border-radius: 10px;
     padding: 0px 0px;
     margin-top: 10px;
@@ -56,9 +64,7 @@ img {
 }
 
 div {
-    border: 5px solid #11C4CA;
-    outline: thick;
-    border-radius: 10px;
-    padding: 0 20px 20px 20px;
-    font-size: 25px;
+    border: 10px solid #11C4CA;
+    border-radius: 25px;
+    padding: 25px 25px;
 }
