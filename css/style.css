@@ -3,32 +3,69 @@ html {
 }
 
 body {
-        width: auto;
-        margin: 0 auto;
-        padding: 20px 20px;
-        /* border: 5px solid rgb(255, 255, 255); */
-
-        background-image: url(../img/pexels-sheena-wood-574116.jpg);    
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;  
+    width: auto;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background-image: url(../img/pexels-sheena-wood-574116.jpg);    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
 }
 
-h1, h2 {
+div {
+    color: #11C4CA;
+    border: 10px solid ;
+    border-radius: 0px;
+    padding: 25px 25px;
+}
+
+h1 {
+    border: 9px solid #00224b;
+    border-radius: 50px;
+    color: #60F585;
+    text-align: center;
+    text-emphasis: bold;
+    font-size: 65px;
+    margin: 25px 25px;
+    padding: 25px 25px; 
+}
+
+img {
+    border: 9px solid #ff6ec7;
+    border-radius: 75px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    padding: 25px 25px;
+    margin: 25px 25px;
+    width: 250px;
+}
+
+p {
+    border: .1em solid #00feca;
+    color: #11C4CA;
+    font-size: 30px;
+    margin: 25px 25px;
+    padding: 25px 25px;
+
+}
+
+h2 {
     border: .1em solid;
     color: #60F585;
-    text-align: left;
+    text-align: center;
     text-emphasis: bold;
-    font-size: 30px;
+    font-size: 40px;
     margin: 25px 25px;
     padding: 25px 25px;
 }   
 
-p {
-    border: .1em solid rgb(255, 74, 74);
+ul {
     color: #11C4CA;
+    list-style-type: disc;
+    list-style-position: inside;
     font-size: 30px;
+    border: .1em solid violet;
     margin: 25px 25px;
     padding: 25px 25px;
 }
@@ -37,34 +74,10 @@ ol {
     color: #11C4CA;
     list-style-type: decimal;
     list-style-position: inside;
+    font-size: 30px;
     text-align: left;
     text-emphasis: bold;
     border: .1em solid orange;
     margin: 25px 25px;
-    padding: 25px 25px;
-}
-
-ul {
-    color: #11C4CA;
-    list-style-type: disc;
-    list-style-position: inside;
-    border: .1em solid violet;
-    margin: 25px 25px;
-    padding: 25px 25px;
-}
-
-img {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 0px 0px;
-    margin-top: 10px;
-    margin-right: 25px;
-    width: 200px;
-    float: left;
-}
-
-div {
-    border: 10px solid #11C4CA;
-    border-radius: 25px;
     padding: 25px 25px;
 }
